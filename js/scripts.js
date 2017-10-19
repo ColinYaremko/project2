@@ -1,8 +1,35 @@
 //var hello = console.log('hi there Colin.  You really rock!!');
 
 //hello();
+$(function () {
+  
+  $('select').on('change', function () {
+      event.preventDefault();
 
 
+
+     var section = $('#section').val();
+     //var section = 'movies'
+     var storyresult = ''
+       var url = "https://api.nytimes.com/svc/topstories/v2/"+section+".json?api-key=e0b2aa4bac19467da180df0979f2aa85";
+       $.ajax({
+         url: url,
+         method: 'GET',
+       }).done(function(result) {
+       console.log(result);
+       
+    });
+});
+});
+
+ /* if (data.results.length === 0) {
+    $('.hidden').append('<p>Sorry, nothing found. Please try another section.</p>');
+}).fail(function(err) {
+  throw err;
+});    */
+
+
+/* 
 
 
 $('#get-news').on('click', function (e) {
@@ -13,7 +40,7 @@ $('#get-news').on('click', function (e) {
 
   $.ajax({
     method: 'GET',
-    url: 'http://api.nytimes.com/svc/topstories/v2/technologyjson?api-key=e0b2aa4bac19467da180df0979f2aa85'
+    url: 'http://api.nytimes.com/svc/topstories/v2/technology.json?api-key=e0b2aa4bac19467da180df0979f2aa85'
   })
   .done(function(data){
     
@@ -38,7 +65,7 @@ $('#get-news').on('click', function (e) {
   
   
   
-});
+});*/
 
 //http://api.nytimes.com/svc/topstories/v2/{section}.{response-format}?//api-key=e0b2aa4bac19467da180df0979f2aa85
 
