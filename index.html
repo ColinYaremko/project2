@@ -1,19 +1,59 @@
 <!<!DOCTYPE html>
 
   <head>
+    <meta charset="utf-8">
+    <title>NYT API - Project 2</title>
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="./build/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   </head>
 
   <body>
+        <div class="container">
+        <header class="header">
+           <div class="logo">
+             <!-- <h1 class="Instanews">Instanews - New York Times News Reader</h1> -->
+              <img src="assets/images/nyt-logo.svg" alt="New York Times Logo" />
+           </div>
+ 
+           <form class="sectionForm" action="#" method="post">
+ 
+              <div class="sectionFormInner">
+                <p>Choose a section:</p>
+                <select name="sections" id="sections">
+                   <option value="">Sections ...</option>
+                   <option value="home">Home</option>
+                   <option value="movies">Movies</option>
+                   <option value="business">Business</option>
+                   <option value="science">Science</option>
+                   <option value="technology">Technology</option>
+                   <option value="food">Food</option>
+                  </select>
+              </div>
+           </form>
+        </header>
+        </div>
 
-    <header>
+        <section class="story-grid">
+           <div class="stories"></div>
+           <img class="loadCircle" src="assets/images/ajax-loader.gif" alt="Loading..."  />
+       </section>
+ 
 
-    </header>
 
-    <footer>
-      
-    </footer>
 
+
+
+
+  <footer>
+    <div class='copyright'>
+      <p class='copyrightp'>&copy; Copyright 2017 INSTANEWS</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="./js/scripts.js"></script>
+  <!--<script src=".build/js/scripts.min.js"></script>-->
   </body>
 
 
@@ -52,5 +92,6 @@
 
 
 
-
+<!--
 http://redacademy.github.io/instanews/
+-->

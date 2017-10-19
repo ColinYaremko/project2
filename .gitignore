@@ -11,7 +11,10 @@ ehthumbs.db
 node_modules/
 /fonts2
 /awesome
+/css
+/js
 .zip
+
 
 # Ignore OS files #
 

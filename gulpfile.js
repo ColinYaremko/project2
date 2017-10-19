@@ -4,7 +4,26 @@ var gulp = require('gulp'); //load gulp first!!
 var uglify = require('gulp-uglify'), //comma for using multiple variables
     rename = require('gulp-rename'), //done with var and close with ;
     eslint = require('gulp-eslint'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cssnano = require('gulp-cssnano'),
+    prettyError = require('gulp-prettyerror');
+
+gulp.task('sass', function() {
+  gulp.src('./sass/style.scss')
+      .pipe(prettyError()) //Error Handling
+      .pipe(sass())
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions']
+  }))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(cssnano())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'));
+});
+
+
 
 gulp.task('scripts', ['lint'], function() {
   // place code for your default task here
@@ -33,6 +52,7 @@ gulp.task('lint', () => {  // JS 6 90 => is function()
 });
 
 gulp.task('watch', function() {
+  gulp.watch('sass/*scss', ['sass']);
   gulp.watch('./js/*.js', ['scripts']);
 });  // if file in js changes, run the scripts task to uglify it.
 

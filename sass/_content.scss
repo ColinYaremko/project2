@@ -1,0 +1,43 @@
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #000000;
+  color: #c2c2c2;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  width: 425px;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  display: flex;
+  padding:  3.5rem 0 0 0;
+
+}
+
+.sectionForm {
+  display: flex;
+}
+
+.loadCircle {
+  display: none;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding:  5.5rem 0 0 0;
+}
+
+
+
