@@ -24,6 +24,8 @@ header{
 
 }
 
+@gratio: 1.61803398875;
+
 .sectionForm {
   display: flex;
 }
@@ -33,11 +35,25 @@ header{
 }
 
 
+.hidden {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.newsSpot {
+  display: flex;
+  width: 11em;
+  height: 17em;
+}
+
+
 footer {
   display: flex;
   justify-content: center;
   padding:  5.5rem 0 0 0;
 }
+
 
 
 

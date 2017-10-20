@@ -6,21 +6,58 @@ $(function () {
   $('select').on('change', function () {
       event.preventDefault();
 
+      
 
+       // Loader
+       $('.hidden').empty();
+       $('.loading').show();
 
      var section = $('#section').val();
      //var section = 'movies'
-     var storyresult = ''
+     var storyresult = '';
        var url = "https://api.nytimes.com/svc/topstories/v2/"+section+".json?api-key=e0b2aa4bac19467da180df0979f2aa85";
        $.ajax({
          url: url,
          method: 'GET',
        }).done(function(result) {
-       console.log(result);
        
+       if (status.num_results === 0) {  //if num_results is 0, display message.
+        $('.hidden').append('<p>Nothing found. No news isn\'t always good news.</p> <p>Please try again.</p>');
+       }
+
+    else { 
+  var nytData = result.results.filter(function (item) {
+      if (item.multimedia.length !== 0){
+        return item
+      }
+      return 
+     
+  }).slice(0, 12).forEach(function (key, index) { console.log(key, index)
+      $('.hidden').append('<a href="' + key.url + '"> <div class="all-articles article-' + index + '"><div class="text-' + index + '"><a href="' + key.url + '" class="text"> ' + key.abstract + ' </a></div></div></a>');
+      
+      var img = key.multimedia[key.multimedia.length - 1];
+      $('.article-' + index).css('background-image', 'url(' + img.url + ')');
+
+      $('.text-' + index).hide();
+      $('.article-' + index).hover(function () {
+          $('.text-' + index).slideToggle('slow', function () {});
+      });
+  });
+}
+}).always(function () {
+$('.loading').hide();
+
     });
+    
+  });
 });
-});
+
+
+
+
+
+
+
 
  /* if (data.results.length === 0) {
     $('.hidden').append('<p>Sorry, nothing found. Please try another section.</p>');
@@ -30,6 +67,11 @@ $(function () {
 
 
 /* 
+
+ $(".box").on(change, function() { 
+    $(this).toggleClass("hidden");
+ });   Going to need the toggle for hiding and opening the results on the grids.
+
 
 
 $('#get-news').on('click', function (e) {
@@ -67,6 +109,6 @@ $('#get-news').on('click', function (e) {
   
 });*/
 
-//http://api.nytimes.com/svc/topstories/v2/{section}.{response-format}?//api-key=e0b2aa4bac19467da180df0979f2aa85
 
-//'http://api.nytimes.com/svc/topstories/v2/'+ section + 'json?//api-key=e0b2aa4bac19467da180df0979f2aa85'
+
+

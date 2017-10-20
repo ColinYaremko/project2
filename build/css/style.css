@@ -110,6 +110,7 @@ header {
   display: flex;
   padding: 3.5rem 0 0 0; }
 
+@gratio : 1.61803398875;
 .sectionForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +118,24 @@ header {
 
 .loadCircle {
   display: none; }
+
+.hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.newsSpot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 11em;
+  height: 17em; }
 
 footer {
   display: -webkit-box;
