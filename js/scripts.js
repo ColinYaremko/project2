@@ -9,8 +9,9 @@ $(function () {
       
 
        // Loader
+       //$('.hidden').hide();
        $('.hidden').empty();
-       $('.loading').show();
+       $('.loadCircle').show();
 
      var section = $('#section').val();
      //var section = 'movies'
@@ -33,19 +34,19 @@ $(function () {
       return 
      
   }).slice(0, 12).forEach(function (key, index) { console.log(key, index)
-      $('.hidden').append('<a href="' + key.url + '"> <div class="all-articles article-' + index + '"><div class="text-' + index + '"><a href="' + key.url + '" class="text"> ' + key.abstract + ' </a></div></div></a>');
+      $('.hidden').append('<a href="' + key.url + '"> <div class="all-articles article-' + index + '"><div class="text-' + index + '" style="display:flex;"><a href="' + key.url + '" class="text"> ' + key.abstract + ' </a></div></div></a>');
       
       var img = key.multimedia[key.multimedia.length - 1];
       $('.article-' + index).css('background-image', 'url(' + img.url + ')');
 
-      $('.text-' + index).hide();
-      $('.article-' + index).hover(function () {
-          $('.text-' + index).slideToggle('slow', function () {});
+      //$('.text-' + index).hide();
+      //$('.article-' + index).hover(function () {
+          //$('.text-' + index).slideToggle('slow', function () {});
       });
-  });
+  //});
 }
 }).always(function () {
-$('.loading').hide();
+$('.loadCircle').hide();
 
     });
     
