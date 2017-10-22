@@ -1,14 +1,24 @@
 
+/* A Few SCSS variables*/
+$fontSizeBase: 16px;
+$fontColor: #c2c2c2;
+$bgrndColor: #000000;
+$gratio: 1.61803398875;
+$smallWidth: 428px;
+$medWidth: 600px;
+$maxWidth: 1000px;
+
 html {
-  font-size: 16px;
+  font-size: $fontSizeBase;
 }
 
 body {
-  background: #000000;
-  color: #c2c2c2;
+  background: $bgrndColor;
+  color: $fontColor;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  width: 425px;
+  width: $smallWidth;
+  margin: 0 auto;
 }
 
 header{
@@ -18,13 +28,9 @@ header{
   justify-content: space-evenly;
 }
 
-.logo {
-  display: flex;
-  padding:  3.5rem 0 0 0;
-
+.error {
+  text-align: center;
 }
-
-@gratio: 1.61803398875;
 
 .sectionForm {
   display: flex;
@@ -34,24 +40,20 @@ header{
   margin: 1rem 0 0 0;
 }
 
+/*//SCSS mixin*/
+@mixin centerLoader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 .loadCircle {
-  display: none;
+  display: none; 
+  height: 100px;
+  width: 100px;
+  @include centerLoader;
 }
-
-
-.hidden {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.newsSpot {
-  display: flex;
-  width: 11em;
-  height: 17em;
-}
-
 
 footer {
   display: flex;
@@ -59,6 +61,80 @@ footer {
   padding:  5.5rem 0 0 0;
 }
 
+all-articles {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  padding:  3.5rem 0 0 0;
+}
+
+.logoPre {
+  height: auto;
+  max-width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 0 2em 0;
+}
+
+.logoPre.logoPost {
+  height: 150px;
+  max-width: 100%;
+  margin-top: 2em;
+}
+
+/*// SCSS nested*/
+.hidden {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    .newsSpot {
+     display: flex;
+    }
+}
 
 
 
+/*//SCSS Multiplication*/
+.hiddena {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 428px;
+  height: (($smallWidth / $gratio)/2);
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #ffffff;
+  align-items: flex-end;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+/* More SCSS math */
+@media(min-width: 600px) {
+  body {
+   width: 600px;
+  }
+  
+  .hiddena {
+    width: 300px;
+    height: (($medWidth / $gratio)/4);
+    flex-basis: 50%;
+  }
+}
+
+/* More SCSS math */
+@media(min-width: 1000px) {
+  body {
+    width: 1000px;
+  }
+
+  .hiddena {
+    width: 250px;
+    height: (($maxWidth / $gratio)/8);
+    flex-basis: 25%;
+  }
+}
