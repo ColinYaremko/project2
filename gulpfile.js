@@ -29,7 +29,7 @@ gulp.task('scripts', ['lint'], function() {
   // place code for your default task here
   gulp.src('./js/*.js') // What files do we want gulp to consume?
       .pipe(uglify()) // Call the uglify function on these files
-      .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
+      .pipe(rename({ extname: '.min.min.js' })) // Rename the uglified file
       .pipe(gulp.dest('./build/js')) // Where do we put the result?
 
 });

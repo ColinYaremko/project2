@@ -112,7 +112,7 @@ header {
   display: flex; }
 
 .selector {
-  margin: 1rem 0 0 0; }
+  margin: 1rem 0 1rem 0; }
 
 .error {
   text-align: center; }
@@ -137,14 +137,6 @@ footer {
           justify-content: center;
   padding: 5.5rem 0 0 0; }
 
-all-articles {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,7 +151,7 @@ all-articles {
   padding: 0 0 2em 0; }
 
 .logoPre.logoPost {
-  height: 150px;
+  height: 100px;
   max-width: 100%;
   margin-top: 2em; }
 
@@ -191,7 +183,7 @@ all-articles {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 428px;
-  height: 132.25927px;
+  height: 428px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -205,6 +197,21 @@ all-articles {
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
+.hiddena {
+  overflow: hidden; }
+  .hiddena:hover .jump {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .hiddena .jump {
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px); }
+
+div.jump {
+  height: 150px;
+  margin: 20px 0 20px 0; }
+
 /* More SCSS math */
 @media (min-width: 600px) {
   body {
@@ -217,9 +224,11 @@ all-articles {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
+  .selector {
+    margin: 1rem 0 0 0; }
   .hiddena {
     width: 300px;
-    height: 92.7051px;
+    height: 300px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; } }
 
@@ -237,6 +246,14 @@ all-articles {
             flex-direction: row; }
   .hiddena {
     width: 250px;
-    height: 77.25425px;
+    height: 250px;
     -ms-flex-preferred-size: 25%;
-        flex-basis: 25%; } }
+        flex-basis: 25%; }
+  div.jump {
+    height: 150px;
+    margin: 20px 0 20px 0; }
+  div.all-articles {
+    height: 150px;
+    margin: 20px 0 20px 0; }
+  .selector {
+    margin: 1rem 0 0 0; } }
