@@ -1,6 +1,3 @@
-//var hello = console.log('hi there Colin.  You really rock!!');
-
-//hello();
 $(function () {
   
   $('select').on('change', function () {
@@ -13,7 +10,7 @@ $(function () {
        $('.hidden').empty();
        $('.loadCircle').show();
 
-      var section = $('#section').val();
+      var section = $('#section').val(); //Get value from html selection
       
       //use url with section selection to get results from NYT via Ajax GET
       var url = "https://api.nytimes.com/svc/topstories/v2/"+section+".json?api-key=e0b2aa4bac19467da180df0979f2aa85";
@@ -27,11 +24,11 @@ $(function () {
           } 
 
           else { 
-           var nytData = result.results.filter(function (item) {
+           var nytData = result.results.filter(function (item) {//filter for pic 
           if (item.multimedia.length === 0){
             return item}
-            return }).slice(0, 12).forEach(function (key, index) {
-            console.log(key, index)
+            return }).slice(0, 12).forEach(function (key, index) {//slice past 12
+            console.log(key, index)//shows only 12 stories
             //add new div and populate from chosen 12
             $('.hidden').append('<div><a class= "hiddena" href="' + key.url + '"><div class="all-articles article-' + index + '"><div class="text-' + index + '<a href="' + key.url + '" class="text"> ' + key.abstract + ' </a></div></div></a></div>');
       

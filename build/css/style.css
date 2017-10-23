@@ -95,19 +95,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly; }
-
-.error {
-  text-align: center; }
 
 .sectionForm {
   display: -webkit-box;
@@ -116,6 +113,9 @@ header {
 
 .selector {
   margin: 1rem 0 0 0; }
+
+.error {
+  text-align: center; }
 
 /*//SCSS mixin*/
 .loadCircle {
@@ -209,6 +209,14 @@ all-articles {
 @media (min-width: 600px) {
   body {
     width: 600px; }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .hiddena {
     width: 300px;
     height: 92.7051px;
@@ -219,6 +227,14 @@ all-articles {
 @media (min-width: 1000px) {
   body {
     width: 1000px; }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .hiddena {
     width: 250px;
     height: 77.25425px;

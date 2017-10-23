@@ -23,13 +23,9 @@ body {
 
 header{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.error {
-  text-align: center;
 }
 
 .sectionForm {
@@ -38,6 +34,9 @@ header{
 
 .selector {
   margin: 1rem 0 0 0;
+}
+.error {
+  text-align: center;
 }
 
 /*//SCSS mixin*/
@@ -119,6 +118,11 @@ all-articles {
    width: 600px;
   }
   
+  header{
+    display: flex;
+    flex-direction: row;
+  }
+  
   .hiddena {
     width: 300px;
     height: (($medWidth / $gratio)/4);
@@ -130,6 +134,11 @@ all-articles {
 @media(min-width: 1000px) {
   body {
     width: 1000px;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
   }
 
   .hiddena {
