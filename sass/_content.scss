@@ -46,12 +46,6 @@ header{
   @include centerLoader;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  padding:  5.5rem 0 0 0;
-}
-
 .logo {
   display: flex;
   padding:  3.5rem 0 0 0;
@@ -81,10 +75,6 @@ footer {
     }
 }
 
-
-
-
-/*//SCSS Multiplication*/
 .hiddena {
   display: flex;
   flex-direction: row;
@@ -100,28 +90,16 @@ footer {
   flex-grow: 1;
 }
 
-// todo refactor this?
-.hiddena {
-  overflow: hidden;
 
-  &:hover {
-    .jump {
-      transform: translateY(0);
-    }
-  }
-  .jump {
-    transition: .5s;
-    transform: translateY(200px);
-  }
-}
 div.jump {
   height: 150px;
   margin: 20px 0 20px 0;
 }
 
+.jump {
+  background:rgba(0,0,0, 0.5);
+}
 
-
-/* More SCSS math */
 @media(min-width: 600px) {
   body {
    width: 600px;
@@ -137,13 +115,12 @@ div.jump {
   }
 
   .hiddena {
-    width: 300px;
-    height: 300px; 
-    flex-basis: 50%;
+    width: 200px;
+    height: 200px; 
+    flex-basis: 33%;
   }
 }
 
-/* More SCSS math */
 @media(min-width: 1000px) {
   body {
     width: 1000px;
@@ -152,13 +129,22 @@ div.jump {
   header{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 4rem;
+  }
+
+  header.logo.logoPre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .hiddena {
     width: 250px;
-    height: 250px; //(($maxWidth / $gratio)/8);
+    height: 250px; 
     flex-basis: 25%;
   }
+
 
   div.jump {
   height: 150px;
@@ -175,6 +161,21 @@ div.jump {
     margin: 1rem 0 0 0;
   }
 
+  /* Hover only applies to the desktop view */
+  .hiddena {
+    overflow: hidden;
+
+    &:hover {
+      .jump {
+        transform: translateY(0);
+      }
+    }
+    .jump {
+      transition: .5s;
+      transform: translateY(200px);
+      background:rgba(0,0,0, 0.5);
+    }
+  }
 }
 
 

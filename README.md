@@ -25,18 +25,22 @@ Built With
 
 * Chrome - Testing platform - Google.ca
 
-* GULP
+* GULP - Issues and all.
+
+* GIT - github
 
 
 
 Contributing voices and ideas
 
 
-* Jim with his amazing js knowledge
+* Jim with his amazing knowledge
 
 * Rose too
 
 * wdp-fall-2017 classmates
+
+* Full Stack class
 
 * RED Academy 
 
