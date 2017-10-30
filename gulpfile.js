@@ -1,5 +1,6 @@
 var gulp = require('gulp'); //load gulp first!!
 
+
 // Now that we've installed the uglify package we can require it:
 var uglify = require('gulp-uglify'), //comma for using multiple variables
     rename = require('gulp-rename'), //done with var and close with ;
@@ -8,7 +9,8 @@ var uglify = require('gulp-uglify'), //comma for using multiple variables
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
-    prettyError = require('gulp-prettyerror');
+    prettyError = require('gulp-prettyerror'),
+    babel = require('gulp-babel');
 
 gulp.task('sass', function() {
   gulp.src('./sass/style.scss')
@@ -24,12 +26,22 @@ gulp.task('sass', function() {
 });
 
 
+const input = './js/*.js';
+const output = './js/transpiled';
+gulp.task('babel', () => {
+    return gulp.src(input)
+        .pipe(babel({
+         // presets: ['env']
+        }))
+        .pipe(gulp.dest(output));
+});
+
 
 gulp.task('scripts', ['lint'], function() {
   // place code for your default task here
-  gulp.src('./js/*.js') // What files do we want gulp to consume?
+  gulp.src('./js/transpiled/*.js') // What files do we want gulp to consume?
       .pipe(uglify()) // Call the uglify function on these files
-      .pipe(rename({ extname: '.min.min.js' })) // Rename the uglified file
+      .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
       .pipe(gulp.dest('./build/js')) // Where do we put the result?
 
 });
