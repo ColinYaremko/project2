@@ -1,25 +1,33 @@
-Instanews
+# Instanews
 
-Project 2 for RED Academy
+## Project 2 for RED Academy
 
 pic located - ./assets/images/snap-insta.png
+![Screen Shot Instanews](./assets/images/snap-insta.png "instanews")
 
-Getting Started
+### Getting Started
 
 * No special instructions required to get up and running.  Open from your computer.
 
 
-Prerequisites
+### Prerequisites
 
 * No installation required.  Hopefully works on most browsers
 
 
-Technology used
+### Technology used
 
-*HTML, CSS, js, Ajaz, JSON. git, gulp (min, lint, uglify, etc.), node.js
+* HTML 
+* CSS
+* Javascript
+* Ajax
+* JSON
+* git
+* gulp (min, lint, uglify, etc.)
+* node.js
 
 
-Built With
+### Built With
 
 * Visual Studio Code - The "Editor" - https://code.visualstudio.com/
 
@@ -31,12 +39,14 @@ Built With
 
 
 
-Contributing voices and ideas
+### Contributing voices and ideas
 
 
 * Jim with his amazing knowledge
 
 * Rose too
+
+* Nate Moseley!!
 
 * wdp-fall-2017 classmates
 
@@ -44,24 +54,26 @@ Contributing voices and ideas
 
 * RED Academy 
 
+* NYT web API
 
-Versioning:
+
+### Versioning:
 
 * As far as I am aware, this will be the only version unless required to make changes or upgrades.
 
 
-Authors
+### Authors
 
 * Colin Yaremko - blood, sweat and tears without sleep
 
 * See also the list of contributors who participated in this project.
 
 
-License
+### License
 
 * No license presently required
 
 
-Acknowledgments
+### Acknowledgments
 
 * See contributions!
