@@ -1,8 +1,6 @@
-
 html {
   font-size: $fontSizeBase;
 }
-
 
 body {
   background: $bgrndColor;
@@ -13,12 +11,8 @@ body {
   margin: 0 auto;
 }
 
-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
+
+/* Header was here!!*/
 
 .sectionForm {
   display: flex;
@@ -27,20 +21,23 @@ header{
 .selector {
   margin: 1rem 0 1rem 0;
 }
+
 .error {
   text-align: center;
 }
 
+
 /*//SCSS mixin*/
-@mixin centerLoader{
+
+@mixin centerLoader {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .loadCircle {
-  display: none; 
+  display: none;
   height: 100px;
   width: 100px;
   @include centerLoader;
@@ -48,7 +45,7 @@ header{
 
 .logo {
   display: flex;
-  padding:  3.5rem 0 0 0;
+  padding: 3.5rem 0 0 0;
 }
 
 .logoPre {
@@ -65,14 +62,16 @@ header{
   margin-top: 2em;
 }
 
+
 /*// SCSS nested*/
+
 .hidden {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-    .newsSpot {
-     display: flex;
-    }
+  .newsSpot {
+    display: flex;
+  }
 }
 
 .hiddena {
@@ -81,7 +80,7 @@ header{
   flex-wrap: wrap;
   width: 428px;
   height: 428px;
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   color: #ffffff;
@@ -90,33 +89,29 @@ header{
   flex-grow: 1;
 }
 
-
 div.jump {
   height: 150px;
   margin: 20px 0 20px 0;
 }
 
 .jump {
-  background:rgba(0,0,0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media(min-width: 600px) {
   body {
-   width: 600px;
+    width: 600px;
   }
-  
-  header{
+  header {
     display: flex;
     flex-direction: row;
   }
-
   .selector {
     margin: 1rem 0 0 0;
   }
-
   .hiddena {
     width: 200px;
-    height: 200px; 
+    height: 200px;
     flex-basis: 33%;
   }
 }
@@ -125,46 +120,36 @@ div.jump {
   body {
     width: 1000px;
   }
-
-  header{
+  header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 4rem;
   }
-
   header.logo.logoPre {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-
   .hiddena {
     width: 250px;
-    height: 250px; 
+    height: 250px;
     flex-basis: 25%;
   }
-
-
   div.jump {
-  height: 150px;
-  margin: 20px 0 20px 0;
+    height: 150px;
+    margin: 20px 0 20px 0;
   }
-
   div.all-articles {
     height: 150px;
     margin: 20px 0 20px 0;
-    
   }
-
   .selector {
     margin: 1rem 0 0 0;
   }
-
   /* Hover only applies to the desktop view */
   .hiddena {
     overflow: hidden;
-
     &:hover {
       .jump {
         transform: translateY(0);
@@ -173,11 +158,7 @@ div.jump {
     .jump {
       transition: .5s;
       transform: translateY(200px);
-      background:rgba(0,0,0, 0.5);
+      background: rgba(0, 0, 0, 0.5);
     }
   }
 }
-
-
-
-

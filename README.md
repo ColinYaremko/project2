@@ -2,8 +2,9 @@
 
 ## Project 2 for RED Academy
 
-pic located - ./assets/images/snap-insta.png
-![Screen Shot Instanews](./assets/images/snap-insta.png "instanews")
+![snap-insta](https://user-images.githubusercontent.com/32310250/33284555-55bf801c-d364-11e7-8833-c4df2c581158.PNG
+
+Hosted : https://colinyaremko.github.io/project2/
 
 ### Getting Started
 
