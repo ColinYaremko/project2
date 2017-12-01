@@ -1,17 +1,3 @@
-html {
-  font-size: $fontSizeBase;
-}
-
-body {
-  background: $bgrndColor;
-  color: $fontColor;
-  height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  width: $smallWidth;
-  margin: 0 auto;
-}
-
-
 /* Header was here!!*/
 
 .sectionForm {
@@ -99,13 +85,6 @@ div.jump {
 }
 
 @media(min-width: 600px) {
-  body {
-    width: 600px;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-  }
   .selector {
     margin: 1rem 0 0 0;
   }
@@ -117,20 +96,6 @@ div.jump {
 }
 
 @media(min-width: 1000px) {
-  body {
-    width: 1000px;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 4rem;
-  }
-  header.logo.logoPre {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
   .hiddena {
     width: 250px;
     height: 250px;
@@ -161,4 +126,22 @@ div.jump {
       background: rgba(0, 0, 0, 0.5);
     }
   }
+}
+
+@media(max-width: 599px) {
+  header.header {
+    text-align: center;
+  }
+}
+
+.hiddena .jump {
+  padding: 1rem; 
+} 
+
+a {
+  text-decoration: none; 
+}
+
+span {
+  text-transform: uppercase;
 }

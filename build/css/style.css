@@ -91,6 +91,21 @@ body {
   width: 428px;
   margin: 0 auto; }
 
+@media (min-width: 600px) {
+  body {
+    width: 600px; } }
+
+@media (min-width: 1000px) {
+  body {
+    width: 1000px; } }
+
+/*
+
+No fonts called here as they are called in the HTML using Google fonts.
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,6 +121,41 @@ header {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly; }
 
+@media (min-width: 600px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
+@media (min-width: 1000px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 4rem; }
+  header.logo.logoPre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+/* Header was here!!*/
 .sectionForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,16 +245,6 @@ div.jump {
   background: rgba(0, 0, 0, 0.5); }
 
 @media (min-width: 600px) {
-  body {
-    width: 600px; }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
   .selector {
     margin: 1rem 0 0 0; }
   .hiddena {
@@ -214,30 +254,6 @@ div.jump {
         flex-basis: 33%; } }
 
 @media (min-width: 1000px) {
-  body {
-    width: 1000px; }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-top: 4rem; }
-  header.logo.logoPre {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
   .hiddena {
     width: 250px;
     height: 250px;
@@ -263,6 +279,19 @@ div.jump {
       -webkit-transform: translateY(200px);
               transform: translateY(200px);
       background: rgba(0, 0, 0, 0.5); } }
+
+@media (max-width: 599px) {
+  header.header {
+    text-align: center; } }
+
+.hiddena .jump {
+  padding: 1rem; }
+
+a {
+  text-decoration: none; }
+
+span {
+  text-transform: uppercase; }
 
 footer {
   display: -webkit-box;
