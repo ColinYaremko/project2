@@ -2,7 +2,7 @@
 
 ## Project 2 for RED Academy
 
-![snap-insta](https://user-images.githubusercontent.com/32310250/33284555-55bf801c-d364-11e7-8833-c4df2c581158.PNG
+![instanews](https://user-images.githubusercontent.com/32310250/33783400-7639a254-dc11-11e7-91ea-6c34225cd1e1.PNG)
 
 Hosted : https://colinyaremko.github.io/project2/
 
